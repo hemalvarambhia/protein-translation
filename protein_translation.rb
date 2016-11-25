@@ -1,5 +1,8 @@
 class Translation
   def self.of_codon sequence
-    'Methionine'
+    { 
+      'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
+      'AUG' => 'Methionine'
+    }.fetch(sequence)
   end
 end
