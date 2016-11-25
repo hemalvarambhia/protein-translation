@@ -15,7 +15,6 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_Leucine_codons
-    skip
     %w(UUA UUG).each do |codon|
       assert_equal 'Leucine', Translation.of_codon(codon)
     end
