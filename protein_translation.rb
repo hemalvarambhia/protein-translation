@@ -4,7 +4,8 @@ class Translation
       'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
       'AUG' => 'Methionine', 'UUA' => 'Leucine', 'UUG' => 'Leucine',
       'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
-      'UCG' => 'Serine'
+      'UCG' => 'Serine',
+      'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine'
     }[sequence]
   end
 end

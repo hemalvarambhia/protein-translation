@@ -27,9 +27,10 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_Tyrosine_codons
-    skip
     %w(UAU UAC).each do |codon|
-      assert_equal 'Tyrosine', Translation.of_codon(codon)
+      assert_equal(
+        'Tyrosine', Translation.of_codon(codon), 
+        "Expected #{codon} to correspond to Tyrosine")
     end
   end
 
