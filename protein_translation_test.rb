@@ -21,7 +21,6 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_Serine_codons
-    skip
     %w(UCU UCC UCA UCG).each do |codon|
       assert_equal 'Serine', Translation.of_codon(codon)
     end
