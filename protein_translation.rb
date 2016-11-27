@@ -12,6 +12,8 @@ class Translation
   end
 
   def self.of_rna strand
-    %w(Methionine Phenylalanine Tryptophan)
+    strand.scan(/[A-Z]{3}/).
+      map { |part| of_codon(part) }.
+      reject { |translation| translation == 'STOP' }
   end
 end
