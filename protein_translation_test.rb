@@ -49,9 +49,11 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_stop_codons
-    skip
     %w(UAA UAG UGA).each do |codon|
-      assert_equal 'STOP', Translation.of_codon(codon)
+      assert_equal(
+        'STOP', Translation.of_codon(codon),
+        "Expected #{codon} to translate to STOP"
+      )
     end
   end
 

@@ -6,7 +6,8 @@ class Translation
       'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
       'UCG' => 'Serine',
       'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine',
-      'UGG' => 'Tryptophan'
+      'UGG' => 'Tryptophan',
+      'UAA' => 'STOP', 'UAG' => 'STOP', 'UGA' => 'STOP'
     }[sequence]
   end
 end
