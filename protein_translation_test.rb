@@ -42,8 +42,10 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_Tryptophan_codons
-    skip
-    assert_equal 'Tryptophan', Translation.of_codon('UGG')
+    assert_equal(
+      'Tryptophan', Translation.of_codon('UGG'),
+      'Expected UGG to be Tryptophan'
+    )
   end
 
   def test_identifies_stop_codons
