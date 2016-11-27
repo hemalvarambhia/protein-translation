@@ -44,7 +44,7 @@ class TranslationTest < Minitest::Test
   def test_identifies_Tryptophan_codons
     assert_equal(
       'Tryptophan', Translation.of_codon('UGG'),
-      'Expected UGG to be Tryptophan'
+      'Expected UGG to translate to Tryptophan'
     )
   end
 
