@@ -3,6 +3,7 @@ class Translation
     { 
       'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
       'AUG' => 'Methionine', 'UUA' => 'Leucine', 'UUG' => 'Leucine',
+      'UGU' => 'Cysteine', 'UGC' => 'Cysteine',
       'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
       'UCG' => 'Serine',
       'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine',

@@ -35,9 +35,10 @@ class TranslationTest < Minitest::Test
   end
 
   def test_identifies_Cysteine_codons
-    skip
     %w(UGU UGC).each do |codon|
-      assert_equal 'Cysteine', Translation.of_codon(codon)
+      assert_equal(
+        'Cysteine', Translation.of_codon(codon),
+        "Expected #{codon} to translate to Cysteine")
     end
   end
 
