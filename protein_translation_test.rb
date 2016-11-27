@@ -58,10 +58,12 @@ class TranslationTest < Minitest::Test
   end
 
   def test_translates_rna_strand_into_correct_protein
-    skip
     strand = 'AUGUUUUGG'
     expected = %w(Methionine Phenylalanine Tryptophan)
-    assert_equal expected, Translation.of_rna(strand)
+    assert_equal(
+      expected, Translation.of_rna(strand),
+      "Expected #{strand} to translate to #{expected.join(', ')}"
+    )
   end
 
   def test_stops_translation_if_stop_codon_present

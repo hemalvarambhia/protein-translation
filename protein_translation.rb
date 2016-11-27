@@ -10,4 +10,8 @@ class Translation
       'UAA' => 'STOP', 'UAG' => 'STOP', 'UGA' => 'STOP'
     }[sequence]
   end
+
+  def self.of_rna strand
+    %w(Methionine Phenylalanine Tryptophan)
+  end
 end
