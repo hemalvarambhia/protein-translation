@@ -14,9 +14,16 @@ class Translation
 
   def self.of_rna strand
     translations = strand.scan(/[A-Z]{3}/).map { |part| of_codon(part) }
+    
+    if translations.all? { |codon| codon.nil? }
+      raise InvalidCodonError.new(
+        "Strand '#{strand}' is invalid as it contains no codons" )
+    end
 
     stop_at = (translations.index('STOP') || translations.size) - 1
 
     translations[0..stop_at]
   end
 end
+
+InvalidCodonError = Class.new(Exception)
