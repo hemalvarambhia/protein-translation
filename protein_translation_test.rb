@@ -77,7 +77,6 @@ class TranslationTest < Minitest::Test
   end
 
   def test_stops_translation_of_longer_strand
-    skip
     strand = 'UGGUGUUAUUAAUGGUUU'
     expected = %w(Tryptophan Cysteine Tyrosine)
     assert_equal expected, Translation.of_rna(strand)

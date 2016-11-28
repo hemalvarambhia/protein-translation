@@ -13,8 +13,10 @@ class Translation
   end
 
   def self.of_rna strand
-    strand.scan(/[A-Z]{3}/).
-      map { |part| of_codon(part) }.
-      reject { |translation| translation == 'STOP' }
+    translations = strand.scan(/[A-Z]{3}/).map { |part| of_codon(part) }
+
+    stop_at = (translations.index('STOP') || translations.size) - 1
+
+    translations[0..stop_at]
   end
 end
