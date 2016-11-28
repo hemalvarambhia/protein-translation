@@ -1,15 +1,6 @@
 class Translation
   def self.of_codon sequence
-    { 
-      'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
-      'AUG' => 'Methionine', 'UUA' => 'Leucine', 'UUG' => 'Leucine',
-      'UGU' => 'Cysteine', 'UGC' => 'Cysteine',
-      'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
-      'UCG' => 'Serine',
-      'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine',
-      'UGG' => 'Tryptophan',
-      'UAA' => 'STOP', 'UAG' => 'STOP', 'UGA' => 'STOP'
-    }[sequence]
+    CODON_TRANSLATIONS[sequence]
   end
 
   def self.of_rna strand
@@ -24,6 +15,20 @@ class Translation
 
     translations[0..stop_at]
   end
+
+  private
+
+  CODON_TRANSLATIONS = 
+    { 
+      'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
+      'AUG' => 'Methionine', 'UUA' => 'Leucine', 'UUG' => 'Leucine',
+      'UGU' => 'Cysteine', 'UGC' => 'Cysteine',
+      'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
+      'UCG' => 'Serine',
+      'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine',
+      'UGG' => 'Tryptophan',
+      'UAA' => 'STOP', 'UAG' => 'STOP', 'UGA' => 'STOP'
+    }
 end
 
 InvalidCodonError = Class.new(Exception)
