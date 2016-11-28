@@ -20,14 +20,23 @@ class Translation
 
   CODON_TRANSLATIONS = 
     { 
-      'UUU' => 'Phenylalanine', 'UUC' => 'Phenylalanine',
-      'AUG' => 'Methionine', 'UUA' => 'Leucine', 'UUG' => 'Leucine',
-      'UGU' => 'Cysteine', 'UGC' => 'Cysteine',
-      'UCU' => 'Serine', 'UCC' => 'Serine', 'UCA' => 'Serine', 
+      'UUU' => 'Phenylalanine', 
+      'UUC' => 'Phenylalanine',
+      'AUG' => 'Methionine', 
+      'UUA' => 'Leucine', 
+      'UUG' => 'Leucine',
+      'UGU' => 'Cysteine', 
+      'UGC' => 'Cysteine',
+      'UCU' => 'Serine', 
+      'UCC' => 'Serine', 
+      'UCA' => 'Serine', 
       'UCG' => 'Serine',
-      'UAU' => 'Tyrosine', 'UAC' => 'Tyrosine',
+      'UAU' => 'Tyrosine', 
+      'UAC' => 'Tyrosine',
       'UGG' => 'Tryptophan',
-      'UAA' => 'STOP', 'UAG' => 'STOP', 'UGA' => 'STOP'
+      'UAA' => 'STOP', 
+      'UAG' => 'STOP', 
+      'UGA' => 'STOP'
     }
 end
 
